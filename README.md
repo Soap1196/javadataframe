@@ -1,5 +1,5 @@
 Instructions for creating a native spark installation within WSL.
-Please note user made need to install the proper comapny certificates to use distro package managers 
+Please note user made need to install the proper company certificates to use distro package managers inside proxy.
 
 update system
 
