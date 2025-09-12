@@ -1,7 +1,15 @@
 package com.javadataframe;
 
+import org.apache.spark.sql.DataFrameReader;
+import org.apache.spark.sql.SparkSession;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        SparkSession session = SparkSession.builder()
+            .appName("TouristDataFrameExample")
+            .master("local[*]")
+            .getOrCreate();
+
+        DataFrameReader dataFrameReader = session.read();
     }
 }
