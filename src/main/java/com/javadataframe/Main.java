@@ -37,7 +37,11 @@ public class Main {
         // Remove "high" from all entries in the fourth column
         df = df.withColumn(fourthCol, functions.regexp_replace(df.col(fourthCol), "high", ""));
 
-
+        // Export the DataFrame to a CSV file
+        df.write()
+                .option("header", "true")
+                .mode("overwrite")
+                .csv("src/main/java/com/javadataframe/fileStore/output_csv");
 
         // Show the DataFrame contents capatailized
         System.out.println("DataFrame content:");
